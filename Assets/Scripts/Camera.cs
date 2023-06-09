@@ -16,6 +16,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // si el player no es null se ajusta el transform de la camara con el del player
         if (player != null)
         {
             Vector3 cameraPosition = transform.position;

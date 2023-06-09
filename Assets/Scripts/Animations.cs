@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,40 +7,50 @@ public class Animations : MonoBehaviour
 {
     public Animator animator;
 
+    private Vector3 velocity = Vector3.zero;
+    private float speed = 10f;
+    private int movementDirection;
+
+    private const int DERECHA = 1;
+    private const int IZQUIERDA = -1;
+    private const int QUIETO = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        movementDirection = QUIETO;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 move;
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && movementDirection != IZQUIERDA)
         {
-            animator.SetBool("Run", true);
-            animator.SetBool("Idle", false);
-            Vector3 changedirection = transform.localScale;
-            changedirection.x = -1;
-            transform.localScale = changedirection;
-            move = Vector3.right * Time.deltaTime * 10;
-        }else if (Input.GetKey(KeyCode.A))
+            Move(DERECHA);
+
+        }
+        else if (Input.GetKey(KeyCode.A) && movementDirection != DERECHA)
         {
-            animator.SetBool("Run", true);
-            animator.SetBool("Idle", false);
-            Vector3 changedirection = transform.localScale;
-            changedirection.x = 1;
-            transform.localScale = changedirection;
-            move = Vector3.left * Time.deltaTime * 10;
+            Move(IZQUIERDA);
         }
         else
         {
+            movementDirection = QUIETO;
             animator.SetBool("Run", false);
             animator.SetBool("Idle", true);
-            move = Vector3.zero;
+            velocity = Vector3.zero;
         }
 
-        transform.position += move;
+        transform.position += velocity * Time.deltaTime;
+    }
+
+    private void Move(int direction)
+    {
+        movementDirection = direction;
+        animator.SetBool("Run", true);
+        animator.SetBool("Idle", false);
+        Vector3 scale = transform.localScale;
+        scale.x = direction;
+        transform.localScale = scale;
+        velocity = direction * Vector3.right * speed;
     }
 }

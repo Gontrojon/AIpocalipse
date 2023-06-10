@@ -23,12 +23,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.D) && movementDirection != IZQUIERDA)
+        if (Input.GetKey(KeyCode.D))
         {
             Move(DERECHA);
 
         }
-        else if (Input.GetKey(KeyCode.A) && movementDirection != DERECHA)
+        else if (Input.GetKey(KeyCode.A))
         {
             Move(IZQUIERDA);
         }

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -38,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fondo Final
+    uniqueID: 2090098989
+    locked: 0
+  - name: Fondo Intermedio
+    uniqueID: 2918392727
+    locked: 0
+  - name: Ground
+    uniqueID: 378968173
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

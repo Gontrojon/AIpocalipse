@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player_Trigger : MonoBehaviour
 {
     public Animator animator;
 
     private Vector3 velocity = Vector3.zero;
     private float speed = 10f;
     private int movementDirection;
+    private PlayerState state;
 
     private const int DERECHA = 1;
     private const int IZQUIERDA = -1;
@@ -37,15 +38,11 @@ public class Player : MonoBehaviour
         {
             if (movementDirection == IZQUIERDA)
             {
-                animator.SetBool("Run_Right", false);
-                animator.SetBool("Run_Left", false);
-                animator.SetBool("Idle_Left", true);
+                SetState(PlayerState.Idle_Left);
             }
             else if (movementDirection == DERECHA)
             {
-                animator.SetBool("Run_Right", false);
-                animator.SetBool("Run_Left", false);
-                animator.SetBool("Idle_Right", true);
+                SetState(PlayerState.Idle_Right);
             }
             movementDirection = QUIETO;
             velocity = Vector3.zero;
@@ -59,17 +56,11 @@ public class Player : MonoBehaviour
         movementDirection = direccion;
         if (movementDirection == DERECHA) {
 
-            animator.SetBool("Run_Right", true);
-            animator.SetBool("Run_Left", false);
-            animator.SetBool("Idle_Right", false);
-            animator.SetBool("Idle_Left", false);
+            SetState(PlayerState.Run_Right);
         }
         else if (movementDirection == IZQUIERDA)
         {
-            animator.SetBool("Run_Right", false);
-            animator.SetBool("Run_Left", true);
-            animator.SetBool("Idle_Right", false);
-            animator.SetBool("Idle_Left", false);
+            SetState(PlayerState.Run_Left);
         }
 
         /*Vector3 scale = transform.localScale;
@@ -77,4 +68,27 @@ public class Player : MonoBehaviour
         transform.localScale = scale;*/
         velocity = Vel * Vector3.right * speed;
     }
+    private void SetState(PlayerState newState)
+    {
+        if (state != newState)
+        {
+            animator.ResetTrigger("Idle_Left");
+            animator.ResetTrigger("Idle_Right");
+            animator.ResetTrigger("Run_Left");
+            animator.ResetTrigger("Run_Right");
+            state = newState;
+            animator.SetTrigger($"{state}");
+            //print($"triguereado el estado: {state}");
+        }
+    }
+}
+public enum PlayerState
+{
+    Idle_Left,
+    Idle_Right,
+    Run_Left,
+    Run_Right,
+    Jump,
+    Fall,
+    Push
 }

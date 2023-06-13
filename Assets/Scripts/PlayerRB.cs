@@ -9,7 +9,7 @@ public class PlayerRB : MonoBehaviour
     private float horizontal;
     private float speed = 7.5f;
     private float speedJumping = 1f;
-    private float jumpForce = 10f;
+    [SerializeField] private float jumpForce = 10f;
     private Rigidbody2D rb;
     private Animator animator;
     

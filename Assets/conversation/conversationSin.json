@@ -1,0 +1,165 @@
+{
+	"listaDialogos":
+	[
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"",
+	"Dialogo":"/&ntilde;En un futuro lejano donde todo estaba permitido y no había limites morales, se abrieron laboratorios donde todo tipo de experimentos estaban permitidos y a la orden del dia."
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"",
+	"Dialogo":"Justo en uno de esos laboratorios comienza esta historia…"
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"???: ",
+	"Dialogo":"Protocolo de seguridad activado, energia por debajo del 5%, no es posible mantener el estado de letargo."
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"???: ",
+	"Dialogo":"Se procede a despertar al experimento MAX-00001 por peligrar su integridad."
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"Max: ",
+	"Dialogo":"Donde estoy? Que es este lugar?"
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"???: ",
+	"Dialogo":"Vaciado de capsula terminado liberando al experimento."
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"-1",
+	"Nombre":"Max: ",
+	"Dialogo":"Que está pasando? mi cuerpo se siente pesado y estoy totalmente empapado."
+	},
+	{"IdImagenEscucha":"-1",
+	"IdImagenHabla":"0",
+	"Nombre":"???: ",
+	"Dialogo":"Por fin despiertas, experimento MAX-00001, se libero de tu letargo por la falta de energia en los sistemas, se recomienda que salgas de aqui."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Quien esta hablando?"
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"???: ",
+	"Dialogo":"Perdona mi falta de modales, soy una IA, no tengo un nombre asociado, no te queda mucho tiempo."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Tus sistemas estan funcionando al minimo, necesitas salir y encontrar algun modo de recargar energia."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Ciertamente me siento cansado, AH!!!, mi brazo es de metal, Por que?"
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Experimento MAX-00001, eres uno de los primeros intentos y exitos de fusionar cuerpo humano con maquina, eres un cyborg."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Se te puso en estado de letargo tras descubrir que el exito de esas operaciones era casi nulo y eras un especimen raro."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Por lo cual no se terminó tu desarrollo ocultando todo el mecanizado bajo tejido vivo."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Soy un cyborg, entonces ya no soy humano… No recuerdo casi nada de mí mismo, sólo pequeños fragmentos."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Eres humano uno mejorado enormemente, conservas tu cerebro humano y órganos internos, aunque han sido mejorados. Al igual que tu musculatura, huesos y sistema nervioso."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Comprendo, soy una rata de laboratorio. Pero ahora solo quiero salir de aquí, y ver en qué parte del mundo estoy."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Porque te pones más ropa? tus receptores térmicos no indican que tengas frio."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"No quiero verme el brazo, asi que usare esta chaqueta de momento."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"No puedo pasar, estas tuberias impiden el paso y bloquean el camino."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Tus sistemas motores aun al minimo te permiten moverte con libertad salta los obstáculos y avanza para salir."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Veo que ya te has acostumbrado a moverte mejor."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Si, pero aun me resulta extraño este cuerpo, no se siente como si fuera yo."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Tranquilo sigues siendo tu, ya te acostumbraras, ahora activa el ascensor y podrás salir de aqui."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Gracias por la ayuda, una pena despedirnos tan pronto."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"Despedirnos? Si yo voy contigo a todos lados."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Pero si eres la IA de este laboratorio como te voy a sacar de aqui?"
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"IA: ",
+	"Dialogo":"No soy la IA del laboratorio, estoy alojada en un subsistema de tu cerebro para soporte y ayuda, y veo todo a través de tu ojo izquierdo."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"..."
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Ciertamente se sentía estaño que todo lo que decias sonara dentro de mi cabeza…"
+	},
+	{"IdImagenEscucha":"0",
+	"IdImagenHabla":"0",
+	"Nombre":"Max: ",
+	"Dialogo":"Ya hablaremos luego ahora salgamos de aqui."
+	}
+	]
+}

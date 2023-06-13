@@ -10,37 +10,41 @@ public class Dialogos : MonoBehaviour
     [SerializeField] private GameObject indicador;
     [SerializeField] private GameObject dialogo_panel;
     [SerializeField] private TMP_Text dialogo_text;
+    [SerializeField] private int dialogo_Inicial;
+    [SerializeField] private int dialogo_Final;
 
     private bool playerTriggerDialog;
     private bool didDialogueStart;
     private int lineIndex;
-    private float timeTipeText = 0.05f;
+    private float timeTipeText = 0.02f;
     private SpriteRenderer playerReference;
+    private List<Textos> textos;
 
 
     // Update is called once per frame
     void Update()
     {
-        if (playerTriggerDialog && Input.GetButtonDown("Fire1"))
+        if (playerTriggerDialog)
         {
             if (!didDialogueStart)
             {
                 StartDialoge();
             }
-            else if(dialogo_text.text == dialogoPrueba[lineIndex])
+            else if(dialogo_text.text == (textos[lineIndex].Nombre + textos[lineIndex].Dialogo) && Input.GetButtonDown("Fire1"))
             {
                 NextDialogueLine();
             }
-            else
+            else if(Input.GetButtonDown("Fire1"))
             {
                 StopAllCoroutines();
-                dialogo_text.text = dialogoPrueba[lineIndex];
+                dialogo_text.text = (textos[lineIndex].Nombre + textos[lineIndex].Dialogo);
             }
         }
     }
 
     private void StartDialoge()
     {
+        textos = DialogsManager.singlenton.DialogosEscena(dialogo_Inicial,dialogo_Final);
         didDialogueStart = true;
         dialogo_panel.SetActive(true);
         indicador.SetActive(false);
@@ -53,7 +57,7 @@ public class Dialogos : MonoBehaviour
     private void NextDialogueLine()
     {
         lineIndex++;
-        if (lineIndex < dialogoPrueba.Length)
+        if (lineIndex < textos.Count)
         {
             StartCoroutine(ShowLine());
         }
@@ -63,15 +67,17 @@ public class Dialogos : MonoBehaviour
             dialogo_panel.SetActive(false);
             indicador.SetActive(true);
             playerReference.enabled = true;
+            GetComponent<Collider2D>().enabled = false;
             Time.timeScale = 1f;
+            
         }
     }
 
     private IEnumerator ShowLine()
     {
-        dialogo_text.text = string.Empty;
+        dialogo_text.text = textos[lineIndex].Nombre;
 
-        foreach (char ch in dialogoPrueba[lineIndex])
+        foreach (char ch in textos[lineIndex].Dialogo)
         {
             dialogo_text.text += ch;
             yield return new WaitForSecondsRealtime(timeTipeText);

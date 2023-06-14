@@ -5,8 +5,8 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     public Transform player;
-    private float leftLimit;
-    private float rightLimit;
+    private float leftLimit = -2.2f;
+    private float rightLimit = 156f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class Camera : MonoBehaviour
         {
             Vector3 cameraPosition = transform.position;
             cameraPosition.x = player.position.x;
-            //cameraPosition.x = Mathf.Clamp(mario.position.x, leftLimit, rightLimit);
+            cameraPosition.x = Mathf.Clamp(player.position.x, leftLimit, rightLimit);
             transform.position = cameraPosition;
         }
     }

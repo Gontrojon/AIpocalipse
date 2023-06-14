@@ -74,7 +74,7 @@ public class PlayerRB : MonoBehaviour
         Vector3 origin = transform.position;
         origin.y -= 0.65f;
         Vector3 direction = Vector3.down;
-        float maxDistance = 0.045f;
+        float maxDistance = 0.05f;
 
         LayerMask mask = LayerMask.GetMask("Ground");
         RaycastHit2D rc = Physics2D.Raycast(origin, direction, maxDistance, mask);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,15 @@ public class ParallaxEfect : MonoBehaviour
     // variables para longitud del fondo y la posicion inicial
     private float fondoWidth, startPos;
 
+    public bool activado;
+
     // Start is called before the first frame update
     void Start()
+    {
+        Iniciar();
+    }
+
+    private void Iniciar()
     {
         // guardamos la posicion inicial
         startPos = transform.position.x;
@@ -24,15 +32,18 @@ public class ParallaxEfect : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // variable para poder calcular cuadno se tiene que repetir la capa
-        float temp = (cam.transform.position.x * (1 - parallaxEffect));
-        // variable que mueve la capa segun el efecto de parallax
-        float dist = (cam.transform.position.x * parallaxEffect);
+        if (activado)
+        {
+            // variable para poder calcular cuadno se tiene que repetir la capa
+            float temp = (cam.transform.position.x * (1 - parallaxEffect));
+            // variable que mueve la capa segun el efecto de parallax
+            float dist = (cam.transform.position.x * parallaxEffect);
 
-        // se asigna a la posicion de la capa su posicion inicial mas la distancia recorrida
-        transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
-
+            // se asigna a la posicion de la capa su posicion inicial mas la distancia recorrida
+            transform.position = new Vector3(startPos + dist, transform.position.y, transform.position.z);
+        }
         // if para la reposicion de las capas
+        /*
         if(temp > startPos + fondoWidth)
         {
             // se le suma a la posicion inicial el ancho del fondo
@@ -41,6 +52,16 @@ public class ParallaxEfect : MonoBehaviour
         {
             // se le resta a la posicion inicial el ancho del fondo
             startPos -= fondoWidth;
+        }*/
+    }
+
+    public void AcitvarParallax(bool status)
+    {
+        activado = status;
+
+        if (activado)
+        {
+            Iniciar();
         }
     }
 }

@@ -8,9 +8,22 @@ public class MenuPrincipal : MonoBehaviour
     [SerializeField] private GameObject ButonPlay;
     [SerializeField] private GameObject ButonCredits;
     [SerializeField] private GameObject ButonCloseGame;
+    [SerializeField] private AudioSource audiosource;
+
+    private void OnEnable()
+    {
+        audiosource.Play();
+    }
+
+    private void OnDisable()
+    {
+        audiosource.Pause();
+    }
+
     public void PartidaNuevaButonOnclick()
     {
         gameObject.SetActive(false);
+        GameManager.singleton.StartWhitMenu();
         GameManager.singleton.StartGame();
     }
 

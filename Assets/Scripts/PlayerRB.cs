@@ -26,10 +26,10 @@ public class PlayerRB : MonoBehaviour
     {
 
 
-        Move();
+        
         if (IsGrounded())
         {
-            
+            Move();
             speedJumping = 1f;
             if (Input.GetButtonDown("Jump"))
             {
@@ -43,6 +43,10 @@ public class PlayerRB : MonoBehaviour
         }
         else
         {
+            if (!BackCollision() && !FrontCollision())
+            {
+                Move();
+            }
             speedJumping = 0.5f;
             animator.SetBool("Jump", true);
         }
@@ -68,6 +72,37 @@ public class PlayerRB : MonoBehaviour
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         animator.SetBool("Jump", true);
     }
+    bool BackCollision()
+    {
+        Vector3 direction = Vector3.left;
+
+        Vector3 origin = transform.position;
+        origin.y -= 0.6f;
+        origin.x -= 0.25f;
+        float maxDistance = 0.1f;
+        // Platform
+        LayerMask mask = LayerMask.GetMask("Platform");
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, mask);
+        Debug.DrawRay(origin, direction * maxDistance, Color.red);
+
+        return hit.collider != null;
+    }
+
+    bool FrontCollision() {
+
+        Vector3 direction = Vector3.right;
+
+        Vector3 origin = transform.position;
+        origin.y -= 0.6f;
+        origin.x += 0.25f;
+        float maxDistance = 0.1f;
+        // Platform
+        LayerMask mask = LayerMask.GetMask("Platform");
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, mask);
+        Debug.DrawRay(origin, direction * maxDistance, Color.blue);
+
+        return hit.collider != null;
+    }
 
     bool IsGrounded()
     {
@@ -77,12 +112,10 @@ public class PlayerRB : MonoBehaviour
         float maxDistance = 0.05f;
 
         LayerMask mask = LayerMask.GetMask("Ground");
-        RaycastHit2D rc = Physics2D.Raycast(origin, direction, maxDistance, mask);
+        RaycastHit2D hit = Physics2D.Raycast(origin, direction, maxDistance, mask);
         Debug.DrawRay(origin, direction * maxDistance, Color.red);
 
-        bool grounded = rc.collider != null;
-
-        return grounded;
+        return hit.collider != null;
     }
 
 }

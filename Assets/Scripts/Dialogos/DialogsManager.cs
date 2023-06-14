@@ -48,7 +48,7 @@ public class DialogsManager : MonoBehaviour
 
         listaTextos = JsonUtility.FromJson<ListaTextos>(jsonDialogos);
 
-        Debuglista();
+        //Debuglista();
     }
 
     private void Debuglista()

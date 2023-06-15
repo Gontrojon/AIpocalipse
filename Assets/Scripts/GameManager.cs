@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject botonPartidaNueva;
     [SerializeField] private GameObject botonContinuar;
     [SerializeField] private AudioSource audiosource;
+    [SerializeField] private Light luz;
+    [SerializeField] private GameObject dialogoInicial;
 
     private void Awake()
     {
@@ -43,16 +45,12 @@ public class GameManager : MonoBehaviour
                 StartGame();
                 menupausa.SetActive(false);
             }
-
-            
-
         }
     }
-
-
     public void StartGame()
     {
         Time.timeScale = 1f;
+        dialogoInicial.SetActive(true);
         audiosource.Play();
     }
 
@@ -66,5 +64,30 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         audiosource.Pause();
     }
+
+    public void ElPajaroEstaEnElNido(GameObject player)
+    {
+        //StartCoroutine(FadeLight());
+        menupausa.SetActive(true);
+        botonPartidaNueva.SetActive(false);
+        botonContinuar.SetActive(false);
+        MenuPrincipal.singlenton.ActivarCreditosGameOver();
+    }
+
+    private IEnumerator FadeLight()
+    {
+
+        while (luz.intensity > 0.02f)
+        {
+            luz.intensity -= 0.004f;
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        menupausa.SetActive(true);
+        botonPartidaNueva.SetActive(false);
+        botonContinuar.SetActive(false);
+        MenuPrincipal.singlenton.ActivarCreditosGameOver();
+    }
+
 
 }

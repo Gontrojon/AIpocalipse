@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Textos
 {
-    public int IdImagenEscucha;
-    public int IdImagenHabla;
+    public int IdImagenIzquierda;
+    public int IdImagenDerecha;
     public string Nombre;
     public string Dialogo;
 }

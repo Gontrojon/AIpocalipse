@@ -57,8 +57,8 @@ public class DialogsManager : MonoBehaviour
         Debug.Log(listaTextos.listaDialogos.Count);
         foreach (Textos t in listaTextos.listaDialogos)
         {
-            Debug.Log(t.IdImagenEscucha);
-            Debug.Log(t.IdImagenHabla);
+            Debug.Log(t.IdImagenIzquierda);
+            Debug.Log(t.IdImagenDerecha);
             Debug.Log(t.Nombre);
             Debug.Log(t.Dialogo);
         }

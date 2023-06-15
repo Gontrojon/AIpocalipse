@@ -24,9 +24,6 @@ public class PlayerRB : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        
         if (IsGrounded())
         {
             Move();
@@ -50,11 +47,6 @@ public class PlayerRB : MonoBehaviour
             speedJumping = 0.5f;
             animator.SetBool("Jump", true);
         }
-
-
-
-
-
     }
 
     private void Move()

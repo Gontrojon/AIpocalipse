@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using UnityEngine.UI;
 
 public class Dialogos : MonoBehaviour
 {
-    [SerializeField, TextArea(4, 6)] private string[] dialogoPrueba;
+    [SerializeField] private GameObject nextDialogo;
     [SerializeField] private GameObject indicador;
     [SerializeField] private GameObject dialogo_panel;
     [SerializeField] private TMP_Text dialogo_text;
     [SerializeField] private int dialogo_Inicial;
     [SerializeField] private int dialogo_Final;
+    [SerializeField] private Image imagenIzquierda;
+    [SerializeField] private Image imagenDerecha;
+    [SerializeField] private List<Sprite> spritesDialogos;
+    
 
     private bool playerTriggerDialog;
     private bool didDialogueStart;
@@ -42,16 +47,46 @@ public class Dialogos : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
+
     private void StartDialoge()
     {
         textos = DialogsManager.singlenton.DialogosEscena(dialogo_Inicial,dialogo_Final);
         didDialogueStart = true;
         dialogo_panel.SetActive(true);
-        indicador.SetActive(false);
+        //indicador?.SetActive(false);
         playerReference.enabled = false;
         lineIndex = 0;
+        CambiarSprites();
         Time.timeScale = 0f;
         StartCoroutine(ShowLine());
+    }
+
+    private void CambiarSprites()
+    {
+        if (textos[lineIndex].IdImagenIzquierda == 0)
+        {
+            imagenIzquierda.gameObject.SetActive(false);
+        }
+        else
+        {
+            imagenIzquierda.gameObject.SetActive(true);
+        }
+
+        if (textos[lineIndex].IdImagenDerecha == 0)
+        {
+            imagenDerecha.gameObject.SetActive(false);
+        }
+        else
+        {
+            imagenDerecha.gameObject.SetActive(true);
+        }
+
+        imagenIzquierda.sprite = spritesDialogos[textos[lineIndex].IdImagenIzquierda];
+        imagenDerecha.sprite = spritesDialogos[textos[lineIndex].IdImagenDerecha];
     }
 
     private void NextDialogueLine()
@@ -59,17 +94,22 @@ public class Dialogos : MonoBehaviour
         lineIndex++;
         if (lineIndex < textos.Count)
         {
+            CambiarSprites();
             StartCoroutine(ShowLine());
         }
         else
         {
             didDialogueStart = false;
             dialogo_panel.SetActive(false);
-            indicador.SetActive(true);
+            //indicador.SetActive(true);
             playerReference.enabled = true;
             GetComponent<Collider2D>().enabled = false;
-            Time.timeScale = 1f;
-            
+
+            if (nextDialogo != null)
+            {
+                nextDialogo.SetActive(true);
+            }
+            gameObject.SetActive(false);
         }
     }
 
@@ -87,12 +127,11 @@ public class Dialogos : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Colision");
         if (collision.gameObject.CompareTag("Player"))
         {
             playerTriggerDialog = true;
             playerReference = collision.gameObject.GetComponent<SpriteRenderer>();
-            indicador.SetActive(true);
+            //indicador?.SetActive(true);
         }
     }
 
@@ -101,7 +140,7 @@ public class Dialogos : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             playerTriggerDialog = false;
-            indicador.SetActive(false);
+            //indicador?.SetActive(false);
         }
     }
 }

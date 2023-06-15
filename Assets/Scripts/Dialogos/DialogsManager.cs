@@ -18,7 +18,7 @@ public class DialogsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        string n = Application.dataPath;
+        string n = Application.streamingAssetsPath;
 
         Debug.Log(n+FILE_NAME);
         CargarDialogos();
@@ -42,7 +42,7 @@ public class DialogsManager : MonoBehaviour
 
     private void CargarDialogos()
     {
-        string path = Application.dataPath + FILE_NAME;
+        string path = Application.streamingAssetsPath + FILE_NAME;
         string jsonDialogos = File.ReadAllText(path);
         Debug.Log(jsonDialogos);
 

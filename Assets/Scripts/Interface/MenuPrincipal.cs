@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuPrincipal : MonoBehaviour
 {
     public static MenuPrincipal singlenton;
 
     [SerializeField] private GameObject panelCreditos;
-    [SerializeField] private GameObject panelCreditosGameOver;
     [SerializeField] private GameObject ButonPlay;
     [SerializeField] private GameObject ButonCredits;
     [SerializeField] private GameObject ButonCloseGame;
+    [SerializeField] private GameObject ButonCloseCredits;
     [SerializeField] private AudioSource audiosource;
 
     private void Awake()
@@ -55,32 +56,37 @@ public class MenuPrincipal : MonoBehaviour
     public void CreditosButonOnclick()
     {
         ActivaDesactivaCreditos(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(ButonCloseCredits);
 
     }
 
     public void CerrarCreditosButonOnclick()
     {
-        ActivaDesactivaCreditos(false);
-    }
-
-    public void ActivarCreditosGameOver()
-    {
-        panelCreditosGameOver.SetActive(true);
-        ActivaDesactivaCreditos(true);
-        panelCreditos.SetActive(false);
-    }
-
-    public void CerrarCreditosGameOverButonOnclick()
-    {
-        panelCreditosGameOver.SetActive(false);
-        ButonCloseGame.GetComponent<RectTransform>().position = ButonCredits.GetComponent<RectTransform>().position;
-        ButonCloseGame.SetActive(true);
+        if (GameManager.singleton.GameOver)
+        {
+            panelCreditos.SetActive(false);
+            ButonCloseGame.GetComponent<RectTransform>().position = ButonCredits.GetComponent<RectTransform>().position;
+            ButonCloseGame.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(ButonCloseGame);
+        }
+        else
+        {
+            ActivaDesactivaCreditos(false);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(ButonCredits);
+        }
     }
 
     private void ActivaDesactivaCreditos(bool status)
     {
         panelCreditos.SetActive(status);
-        ButonPlay.SetActive(!status);
+
+        if (!GameManager.singleton.CanPause)
+        {
+            ButonPlay.SetActive(!status);
+        }
         ButonCredits.SetActive(!status);
         ButonCloseGame.SetActive(!status);
     }

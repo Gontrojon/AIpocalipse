@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager singleton;
     private bool canPause = false;
+    private bool gameOver = false;
+    public bool CanPause { get { return canPause; } }
+    public bool GameOver { get { return gameOver; } }
 
     [SerializeField] private GameObject menupausa;
     [SerializeField] private GameObject botonPartidaNueva;
@@ -13,6 +17,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioSource audiosource;
     [SerializeField] private Light luz;
     [SerializeField] private GameObject dialogoInicial;
+
 
     private void Awake()
     {
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour
                     botonPartidaNueva.SetActive(false);
                     botonContinuar.SetActive(true);
                 }
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(botonContinuar);
             }
             else
             {
@@ -68,10 +75,11 @@ public class GameManager : MonoBehaviour
     public void ElPajaroEstaEnElNido(GameObject player)
     {
         //StartCoroutine(FadeLight());
+        gameOver = true;
         menupausa.SetActive(true);
         botonPartidaNueva.SetActive(false);
         botonContinuar.SetActive(false);
-        MenuPrincipal.singlenton.ActivarCreditosGameOver();
+        MenuPrincipal.singlenton.CreditosButonOnclick();
     }
 
     private IEnumerator FadeLight()
@@ -86,7 +94,7 @@ public class GameManager : MonoBehaviour
         menupausa.SetActive(true);
         botonPartidaNueva.SetActive(false);
         botonContinuar.SetActive(false);
-        MenuPrincipal.singlenton.ActivarCreditosGameOver();
+        MenuPrincipal.singlenton.CreditosButonOnclick();
     }
 
 

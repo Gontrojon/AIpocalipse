@@ -35,11 +35,11 @@ public class Dialogos : MonoBehaviour
             {
                 StartDialoge();
             }
-            else if(dialogo_text.text == (textos[lineIndex].Nombre + textos[lineIndex].Dialogo) && Input.GetButtonDown("Fire1"))
+            else if(dialogo_text.text == (textos[lineIndex].Nombre + textos[lineIndex].Dialogo) && Input.GetButtonDown("Submit"))
             {
                 NextDialogueLine();
             }
-            else if(Input.GetButtonDown("Fire1"))
+            else if(Input.GetButtonDown("Submit"))
             {
                 StopAllCoroutines();
                 dialogo_text.text = (textos[lineIndex].Nombre + textos[lineIndex].Dialogo);
@@ -56,6 +56,7 @@ public class Dialogos : MonoBehaviour
     {
         textos = DialogsManager.singlenton.DialogosEscena(dialogo_Inicial,dialogo_Final);
         didDialogueStart = true;
+        GameManager.singleton.GamePaused = true;
         dialogo_panel.SetActive(true);
         //indicador?.SetActive(false);
         playerReference.enabled = false;
@@ -100,6 +101,7 @@ public class Dialogos : MonoBehaviour
         else
         {
             didDialogueStart = false;
+            GameManager.singleton.GamePaused = false;
             dialogo_panel.SetActive(false);
             //indicador.SetActive(true);
             playerReference.enabled = true;

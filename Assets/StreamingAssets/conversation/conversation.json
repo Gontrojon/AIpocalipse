@@ -104,12 +104,12 @@
 	{"IdImagenIzquierda":"9",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"No quiero verme el brazo así que usare esta chaqueta de momento."
+	"Dialogo":"No quiero verme el brazo, así que usare esta chaqueta de momento."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"No puedo pasar, estas tuberías impiden el paso y bloquean el camino."
+	"Dialogo":"No puedo pasar, hay tuberías saliendo del suelo que bloquean el camino."
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenDerecha":"3",
@@ -129,7 +129,7 @@
 	{"IdImagenIzquierda":"8",
 	"IdImagenDerecha":"1",
 	"Nombre":"IA: ",
-	"Dialogo":"Tranquilo sigues siendo tu, ya te acostumbraras, ahora activa el ascensor y podrás salir de aquí."
+	"Dialogo":"Tranquilo sigues siendo tu, ya te acostumbraras, ahora ve hasta el ascensor del final y podrás salir de aquí."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenDerecha":"1",

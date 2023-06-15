@@ -8,6 +8,13 @@ public class GameManager : MonoBehaviour
     public static GameManager singleton;
     private bool canPause = false;
     private bool gameOver = false;
+    private bool gamePaused = false;
+
+    public bool GamePaused
+    {
+        get { return gamePaused; }
+        set { gamePaused = value; }
+    }
     public bool CanPause { get { return canPause; } }
     public bool GameOver { get { return gameOver; } }
 
@@ -57,6 +64,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1f;
+        gamePaused = false;
         dialogoInicial.SetActive(true);
         audiosource.Play();
     }
@@ -69,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void Pausa()
     {
         Time.timeScale = 0f;
+        gamePaused = true;
         audiosource.Pause();
     }
 

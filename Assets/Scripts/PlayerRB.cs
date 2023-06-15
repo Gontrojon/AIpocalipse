@@ -28,7 +28,7 @@ public class PlayerRB : MonoBehaviour
         {
             Move();
             speedJumping = 1f;
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") && !GameManager.singleton.GamePaused)
             {
                 Jump();
             }

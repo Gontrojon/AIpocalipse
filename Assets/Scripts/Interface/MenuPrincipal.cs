@@ -17,6 +17,8 @@ public class MenuPrincipal : MonoBehaviour
     private void Awake()
     {
         singlenton = this;
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(ButonPlay);
     }
 
     private void OnEnable()

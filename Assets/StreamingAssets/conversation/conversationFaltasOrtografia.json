@@ -5,7 +5,7 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"0",
 	"Nombre":"",
-	"Dialogo":"En un futuro lejano, donde todo estaba permitido y no había límites morales, se abrieron unos laboratorios donde todo tipo de experimentos abominables estaban permitidos."
+	"Dialogo":"En un futuro lejano donde todo estaba permitido y no había límites morales, se abrieron laboratorios donde todo tipo de experimentos estaban permitidos y a la orden del día."
 	},
 	{"IdImagenIzquierda":"0",
 	"IdImagenCentral":"0",
@@ -17,13 +17,13 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"3",
 	"Nombre":"???: ",
-	"Dialogo":"Protocolo de seguridad activado. Energía por debajo del 5%. No es posible mantener el estado de letargo."
+	"Dialogo":"Protocolo de seguridad activado, energía por debajo del 5%, no es posible mantener el estado de letargo."
 	},
 	{"IdImagenIzquierda":"5",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"???: ",
-	"Dialogo":"Se procede a despertar al experimento MAX-00001 para asegurar su integridad."
+	"Dialogo":"Se procede a despertar al experimento MAX-00001 por peligrar su integridad."
 	},
 	{"IdImagenIzquierda":"5",
 	"IdImagenCentral":"0",
@@ -35,19 +35,19 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"4",
 	"Nombre":"???: ",
-	"Dialogo":"Vaciado de cápsula terminado. Liberando al experimento."
+	"Dialogo":"Vaciado de cápsula terminado liberando al experimento."
 	},
 	{"IdImagenIzquierda":"7",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"¿Qué está pasando? ¿Por qué estoy empapado? me siento... Pesado..."
+	"Dialogo":"¿Qué está pasando? mi cuerpo se siente pesado y estoy totalmente empapado."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"???: ",
-	"Dialogo":"Por fin despiertas experimento MAX-00001. Se te liberó de tu letargo por un fallo de energía en los sistemas."
+	"Dialogo":"Por fin despiertas, experimento MAX-00001, se liberó de tu letargo por la falta de energía en los sistemas, se recomienda que salgas de aquí."
 	},
 	{"IdImagenIzquierda":"7",
 	"IdImagenCentral":"0",
@@ -59,7 +59,7 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"???: ",
-	"Dialogo":"Disculpa mi falta de modales. Soy una IA, no tengo un nombre asociado. No te queda mucho tiempo, debes salir de aquí si quieres sobrevivir."
+	"Dialogo":"Perdona mi falta de modales, soy una IA, no tengo un nombre asociado, no te queda mucho tiempo."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
@@ -71,37 +71,37 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"Ciertamente me siento cansado... ¡AH, mi brazo es de metal!"
+	"Dialogo":"Ciertamente me siento cansado, AH!, mi brazo es de metal, ¿Por qué?"
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"4",
 	"Nombre":"IA: ",
-	"Dialogo":"Experimento MAX-00001, eres uno de los primeros intentos exitosos de fusionar cuerpo humano con máquina, eres un cyborg."
+	"Dialogo":"Experimento MAX-00001, eres uno de los primeros intentos y éxitos de fusionar cuerpo humano con maquina, eres un cyborg."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"IA: ",
-	"Dialogo":"Se te puso en estado de suspensión tras descubrir que el éxito del resto de esas operaciones era casi nulo. Eres un espécimen raro."
+	"Dialogo":"Se te puso en estado de letargo tras descubrir que el éxito de esas operaciones era casi nulo y eras un espécimen raro."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"IA: ",
-	"Dialogo":"Por lo que no se terminó de ocultar todas las partes mecanizadas bajo tu tejido vivo."
+	"Dialogo":"Por lo cual no se terminó tu desarrollo ocultando todo el mecanizado bajo tejido vivo."
 	},
 	{"IdImagenIzquierda":"7",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"Soy un cyborg... ¿Quiere decir que ya no soy humano? No recuerdo casi nada de mí mismo, solo pequeños fragmentos."
+	"Dialogo":"Soy un cyborg, entonces ya no soy humano… No recuerdo casi nada de mí mismo, sólo pequeños fragmentos."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"4",
 	"Nombre":"IA: ",
-	"Dialogo":"Eres humano, uno mejorado enormemente. Conservas tu cerebro y órganos internos, aunque han sido mejorados."
+	"Dialogo":"Eres humano uno mejorado enormemente, conservas tu cerebro humano y órganos internos, aunque han sido mejorados."
 	},
 	{"IdImagenIzquierda":"6",
 	"IdImagenCentral":"0",
@@ -113,49 +113,49 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"Comprendo, soy una rata de laboratorio. Pero ahora solo quiero salir de aquí y ver en qué parte del mundo estoy."
+	"Dialogo":"Comprendo, soy una rata de laboratorio. Pero ahora solo quiero salir de aquí, y ver en qué parte del mundo estoy."
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"2",
 	"Nombre":"IA: ",
-	"Dialogo":"¿Por qué te pones más ropa? tus receptores térmicos no indican que tengas frío."
+	"Dialogo":"¿Porque te pones más ropa? tus receptores térmicos no indican que tengas frío."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"No quiero verme el brazo... De momento usaré esta chaqueta."
+	"Dialogo":"No quiero verme el brazo, así que usare esta chaqueta de momento."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"No puedo pasar. Hay tuberías saliendo del suelo que bloquean el camino."
+	"Dialogo":"No puedo pasar, hay tuberías saliendo del suelo que bloquean el camino."
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"3",
 	"Nombre":"IA: ",
-	"Dialogo":"Tus sistemas motores, aun estando al mínimo, te permiten moverte con libertad. Salta los obstáculos y avanza para salir."
+	"Dialogo":"Tus sistemas motores aun al mínimo te permiten moverte con libertad salta los obstáculos y avanza para salir."
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"IA: ",
-	"Dialogo":"Veo que ya te has acostumbrado a moverte con tus nuevas mejoras."
+	"Dialogo":"Veo que ya te has acostumbrado a moverte mejor."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"Sí, pero aún me resulta extraño este cuerpo. No siento que forme parte de mí."
+	"Dialogo":"Si, pero aun me resulta extraño este cuerpo, no se siente como si fuera yo."
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"IA: ",
-	"Dialogo":"Tranquilo sigues siendo tú, ya te acostumbrarás. Ahora ve hasta el ascensor del final y podrás salir de aquí."
+	"Dialogo":"Tranquilo sigues siendo tu, ya te acostumbraras, ahora ve hasta el ascensor del final y podrás salir de aquí."
 	},
 	{"IdImagenIzquierda":"9",
 	"IdImagenCentral":"0",
@@ -173,7 +173,7 @@
 	"IdImagenCentral":"0",
 	"IdImagenDerecha":"1",
 	"Nombre":"Max: ",
-	"Dialogo":"Pero si eres la IA de este laboratorio ¿Cómo te voy a sacar de aquí?"
+	"Dialogo":"Pero si eres la IA de este laboratorio como te voy a sacar de aquí?"
 	},
 	{"IdImagenIzquierda":"8",
 	"IdImagenCentral":"0",
@@ -185,7 +185,7 @@
 	"IdImagenCentral":"13",
 	"IdImagenDerecha":"0",
 	"Nombre":"IA: ",
-	"Dialogo":"Tengo acceso a todos tus subsistemas para brindar soporte y ayuda. Y tambien veo todo a través de tu ojo izquierdo."
+	"Dialogo":"Tengo acceso a todo tus subsistemas para brindar soporte y ayuda, tambien veo todo a través de tu ojo izquierdo."
 	},
 	{"IdImagenIzquierda":"0",
 	"IdImagenCentral":"14",
@@ -197,13 +197,13 @@
 	"IdImagenCentral":"16",
 	"IdImagenDerecha":"0",
 	"Nombre":"Max: ",
-	"Dialogo":"Ciertamente me resultó extraño que todo lo que dijeras sonara como si estuviera dentro de mi cabeza…"
+	"Dialogo":"Ciertamente se sentía estaño que todo lo que decias sonara dentro de mi cabeza…"
 	},
 	{"IdImagenIzquierda":"0",
 	"IdImagenCentral":"14",
 	"IdImagenDerecha":"0",
 	"Nombre":"Max: ",
-	"Dialogo":"Ya hablaremos luego. Ahora salgamos de aquí."
+	"Dialogo":"Ya hablaremos luego ahora salgamos de aquí."
 	}
 	]
 }

@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 355
     height: 561
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a8810000
-      m_LastClickedID: 33192
-      m_ExpandedIDs: 9af6ffff22fbffff
+      m_SelectedIDs: a46f0000ce6f0000706d00004a6d0000306d0000
+      m_LastClickedID: 27952
+      m_ExpandedIDs: 2afbffff8c6c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -409,7 +409,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.1853294, y: 4.536497, z: 0.061674863}
+    m_Target: {x: 1.1637983, y: 1.0391617, z: 0.84592265}
     speed: 2
-    m_Value: {x: 7.1853294, y: 4.536497, z: 0.061674863}
+    m_Value: {x: 1.1637983, y: 1.0391617, z: 0.84592265}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.192719
+    m_Target: 10.968839
     speed: 2
-    m_Value: 17.192719
+    m_Value: 10.968839
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -737,22 +737,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Interface
+    - Assets/Sprites/DialogSprites
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Interface
+  - Assets/Sprites/DialogSprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\cosas clase\Curso_Videojuegos\GameJam\AIpocalipse
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4a650000
-    m_LastClickedID: 25930
-    m_ExpandedIDs: 000000001c6500001e65000020650000226500004265000000ca9a3b
+    m_SelectedIDs: a2730000
+    m_LastClickedID: 29602
+    m_ExpandedIDs: 00000000da710000dc710000de710000e0710000f871000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -780,7 +780,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001c6500001e6500002065000022650000
+    m_ExpandedIDs: 00000000da710000dc710000de710000e071000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -805,9 +805,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a8810000
-    m_LastClickedInstanceID: 33192
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: a46f0000ce6f0000706d00004a6d0000306d0000
+    m_LastClickedInstanceID: 28580
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fa5f0000fe5f0000f65f0000ba760000706100007479000080790000067a0000167b00001062000004600000286100009c7700006e61000078600000a6610000e862000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -883,8 +883,8 @@ MonoBehaviour:
     y: 0
     width: 460
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}

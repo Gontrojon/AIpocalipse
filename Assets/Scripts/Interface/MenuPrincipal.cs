@@ -7,8 +7,18 @@ public class MenuPrincipal : MonoBehaviour
 {
     public static MenuPrincipal singlenton;
 
+    private bool menuActivo = true;
+
+    public bool MenuActivo
+    {
+        get { return menuActivo; }
+        set { menuActivo = value; }
+    }
+
+
     [SerializeField] private GameObject panelCreditos;
     [SerializeField] private GameObject ButonPlay;
+    [SerializeField] private GameObject ButonContinue;
     [SerializeField] private GameObject ButonCredits;
     [SerializeField] private GameObject ButonCloseGame;
     [SerializeField] private GameObject ButonCloseCredits;
@@ -21,13 +31,44 @@ public class MenuPrincipal : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(ButonPlay);
     }
 
+    private void Update()
+    {
+        if (menuActivo)
+        {
+            float vertical = Input.GetAxisRaw("Vertical");
+
+            if (vertical > 0 || vertical < 0)
+            {
+                GameObject go = EventSystem.current.currentSelectedGameObject;
+                if (go == null)
+                {
+                    if (panelCreditos.activeSelf)
+                    {
+                        EventSystem.current.SetSelectedGameObject(ButonCloseCredits);
+                    }
+                    else if (ButonPlay.activeSelf)
+                    {
+                        EventSystem.current.SetSelectedGameObject(ButonPlay);
+                    }
+                    else
+                    {
+                        EventSystem.current.SetSelectedGameObject(ButonContinue);
+                    }
+                    
+                }
+            }
+        }
+    }
+
     private void OnEnable()
     {
+        menuActivo = true;
         audiosource.Play();
     }
 
     private void OnDisable()
     {
+        menuActivo = false;
         audiosource.Pause();
     }
 
@@ -48,11 +89,6 @@ public class MenuPrincipal : MonoBehaviour
     {
         Debug.Log("Se cierra el juego");
         Application.Quit();
-    }
-
-    public void Restart()
-    {
-        //GameManager.instance.Restart();
     }
 
     public void CreditosButonOnclick()

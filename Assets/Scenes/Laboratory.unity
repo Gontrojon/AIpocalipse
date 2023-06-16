@@ -1730,6 +1730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelCreditos: {fileID: 2048207300}
   ButonPlay: {fileID: 895497535}
+  ButonContinue: {fileID: 121640307}
   ButonCredits: {fileID: 1111878373}
   ButonCloseGame: {fileID: 1124257239}
   ButonCloseCredits: {fileID: 121957120}

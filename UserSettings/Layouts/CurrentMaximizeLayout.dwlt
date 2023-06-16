@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 355
     height: 561
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: a46f0000ce6f0000706d00004a6d0000306d0000
       m_LastClickedID: 27952
-      m_ExpandedIDs: 2afbffff8c6c0000
+      m_ExpandedIDs: 2addffff2eddffff2afbffff286c00008c6c0000086d0000526e0000746e00007c6e00000270000010700000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -525,9 +525,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.1637983, y: 1.0391617, z: 0.84592265}
+    m_Target: {x: 393.74896, y: 199.12183, z: -4.8469276}
     speed: 2
-    m_Value: {x: 1.1637983, y: 1.0391617, z: 0.84592265}
+    m_Value: {x: 393.74896, y: 199.12183, z: -4.8469276}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -578,9 +578,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.968839
+    m_Target: 406.16592
     speed: 2
-    m_Value: 10.968839
+    m_Value: 406.16592
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -737,22 +737,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites/DialogSprites
+    - Assets/Sprites/DialogSprites/primerPlano
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites/DialogSprites
+  - Assets/Sprites/DialogSprites/primerPlano
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\cosas clase\Curso_Videojuegos\GameJam\AIpocalipse
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a2730000
-    m_LastClickedID: 29602
-    m_ExpandedIDs: 00000000da710000dc710000de710000e0710000f871000000ca9a3b
+    m_SelectedIDs: 9e960000
+    m_LastClickedID: 38558
+    m_ExpandedIDs: 000000006c7300006e7300007073000072730000e2750000d2760000968c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -780,7 +780,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da710000dc710000de710000e071000000ca9a3b
+    m_ExpandedIDs: 000000006c7300006e7300007073000072730000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -856,10 +856,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 634
-    width: 1459
-    height: 365
+    x: 547
+    y: 659
+    width: 1447
+    height: 358
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

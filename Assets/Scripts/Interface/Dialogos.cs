@@ -14,6 +14,7 @@ public class Dialogos : MonoBehaviour
     [SerializeField] private int dialogo_Inicial;
     [SerializeField] private int dialogo_Final;
     [SerializeField] private Image imagenIzquierda;
+    [SerializeField] private Image imagenCentral;
     [SerializeField] private Image imagenDerecha;
     [SerializeField] private List<Sprite> spritesDialogos;
     
@@ -77,6 +78,15 @@ public class Dialogos : MonoBehaviour
             imagenIzquierda.gameObject.SetActive(true);
         }
 
+        if (textos[lineIndex].IdImagenCentral == 0)
+        {
+            imagenCentral.gameObject.SetActive(false);
+        }
+        else
+        {
+            imagenCentral.gameObject.SetActive(true);
+        }
+
         if (textos[lineIndex].IdImagenDerecha == 0)
         {
             imagenDerecha.gameObject.SetActive(false);
@@ -87,6 +97,7 @@ public class Dialogos : MonoBehaviour
         }
 
         imagenIzquierda.sprite = spritesDialogos[textos[lineIndex].IdImagenIzquierda];
+        imagenCentral.sprite = spritesDialogos[textos[lineIndex].IdImagenCentral];
         imagenDerecha.sprite = spritesDialogos[textos[lineIndex].IdImagenDerecha];
     }
 

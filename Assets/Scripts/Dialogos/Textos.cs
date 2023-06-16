@@ -6,6 +6,7 @@ using UnityEngine;
 public class Textos
 {
     public int IdImagenIzquierda;
+    public int IdImagenCentral;
     public int IdImagenDerecha;
     public string Nombre;
     public string Dialogo;
